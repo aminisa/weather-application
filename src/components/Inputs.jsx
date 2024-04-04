@@ -1,5 +1,9 @@
 import React from "react";
-import { UilSearch, UilLocationPoint } from "@iconscout/react-unicons";
+import {
+  UilSearchAlt,
+  UilMapPin,
+  UilAlignCenterH,
+} from "@iconscout/react-unicons";
 
 function Inputs() {
   return (
@@ -8,8 +12,26 @@ function Inputs() {
         <input
           type="text"
           placeholder="Search.."
-          className="text-sm font-light p-2 w-full shadown-xl focus:outline-none capitalize"
+          className="text-sm font-light p-2 w-full shadown-xl focus:outline-none capitalize rounded-md"
         ></input>
+        <UilSearchAlt
+          size={20}
+          className="text-white cursor-pointer transition ease-out hover:scale-125"
+        />
+        <UilMapPin
+          size={20}
+          className="text-white cursor-pointer transition ease-out hover:scale-125"
+        />
+      </div>
+
+      <div className="flex flex-row w-1/4 items-center justify-center">
+        <button name="metric" className="text-md text-white font-light">
+          °C
+        </button>
+        <p className="text-white text-sm mx-1 mr-0.55"> or </p>
+        <button name="imperial" className="text-md text-white font-light">
+          °F
+        </button>
       </div>
     </div>
   );
